@@ -1,0 +1,99 @@
+* {
+  color: blue;
+}
+body {
+  font-family: Inter, sans-serif;
+  font-size: 30px;
+  /* color: blue; */
+  background-color: #87ceeb;
+}
+.thought-of-day-h1 {
+  background-color: orangered;
+}
+.chessblog {
+  background-color: whitesmoke;
+}
+.chessblog-h2 {
+  background-color: red;
+}
+
+.topic-of-the-week-h1 {
+  font-size: 50px;
+  color: red;
+  /* font-family: comic sans ms; */
+}
+.topic_week_archive {
+  color: blue;
+  text-decoration: none;
+}
+.topic_week_archive:hover {
+  color: black;
+}
+
+.Intro-div {
+  background-color: white;
+}
+.fun-facts {
+  background-color: hsl(60, 96%, 79%);
+}
+
+.jokes-html {
+  color: black;
+  text-decoration: none;
+}
+
+/* .jokes-html:active {
+  text-decoration: none;
+} */
+
+.fun-facts-html {
+  color: black;
+  text-decoration: none;
+}
+
+/* .jokes {
+} */
+/* dea5a4  */
+
+.atharv {
+  background-color: #dea5a4;
+}
+/* white-break */
+.white-break {
+  background-color: black;
+}
+
+.black-strap {
+  background-color: white;
+}
+
+.atharv-channel:hover {
+  text-decoration: none;
+  color: red;
+}
+
+.story:hover {
+  color: red;
+  text-decoration: none;
+}
+a:link {
+  font-size: 25px;
+}
+
+.where_to_learn_languages {
+  color: purple;
+}
+
+.language_platforms {
+  color: brown;
+}
+.courses {
+  font-size: 25px;
+  color: black;
+
+  text-decoration: none;
+}
+
+.courses:hover {
+  color: blue;
+}

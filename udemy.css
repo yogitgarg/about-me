@@ -1,0 +1,142 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+/* Universal selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* This changes the box models so that the borders and the padding are no longer added to the total width or total height that we specify to the box. */
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  /* Vh means viewport height. and this statement means that the height of this box should be 95 percent of the viewport height. */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(123, 213, 111, 0.8),
+      rgba(40, 180, 131, 0.8)
+    ),
+    /* rgba stands for red green blue alpha. We can define a value of number on all the four. alpha means opacity. so you can put a value like 0.8 in alpha. */
+      /* Linear-gradient is used in mixing colors. for example you want to mix 2 colors one red and one blue, you can use linear-gradient. There are many properties in this too. */
+      url(../img/hero.jpg);
+  /* We enter images by using the url element and then locate the file. */
+  background-size: cover;
+  background-position: top;
+  /* The background-position property sets the starting position of a background image. Tip: By default, a background-image is placed at the top-left corner of an element, and repeated both vertically and horizontally. */
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* The X axis is horizontal line. the Y is the vertical line. */
+  /* https://bennettfeely.com/clippy/ for clippath */
+  /* The clip-path CSS property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden. */
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  /* background-color: red; */
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+
+  backface-visibility: hidden;
+  /* this property determines if the backpart of an element when we transform it is visible or hidden for the element */
+  /* This uppercases all the characters. */
+}
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation-name: moveInLeft;
+  /* This defines the name of the animation. */
+  animation-duration: 1s;
+  /* This defines the duration of the animation. */
+  animation-timing-function: ease-out;
+  /* there are many things you can do in this. for eg ease-in ease-out ease-in-out and more */
+  /* in ease-in the animation will start slower and then accelerate over time and with ease-out it is opposite the animation will start faster but then get slow by the end */
+  /* animation-iteration-count: 3; */
+  /* This tells us how many times will the animation run. for eg. if you want the animation to run 3 times, set animation-iteration-count to 3 */
+  /* animation-delay: 3s; */
+  /* This defines the delay before the animation gets start. */
+  /* animation-duration: 5s; */
+}
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+  animation: moveInRight 1s ease-out;
+}
+/* keyframes moveInLeft(name of the animation)*/
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    /* transform: translateX(-100px); */
+    transform: translateX(-100px) rotate(-50deg);
+    /* If we put the translate x with -100 the animation starts from left and if normal hundred then it will start from right */
+    /* the pixels means from how far pixels the animation will */
+    /* transform: translateY(100px); */
+    /* Same in this case. if translate y, */
+  }
+  60% {
+    transform: rotate(120deg);
+    /* deg is a unit that we use for rotation */
+  }
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    /* transform: translateX(-100px); */
+    transform: translateX(100px);
+    /* If we put the translate x with -100 the animation starts from left and if normal hundred then it will start from right */
+    /* the pixels means from how far pixels the animation will */
+    /* transform: translateY(100px); */
+    /* Same in this case. if translate y, */
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
